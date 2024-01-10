@@ -48,11 +48,11 @@ public class details extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
-		if (session != null) {
+		if (session =! null) {
 			ArrayList<String> pizzaId = new ArrayList<String>();
 			ArrayList<String> pizzaName = new ArrayList<String>();
 			String orderId;
-			String buffer;
+			char buffer;
 			ArrayList<String> pizzaPrice = new ArrayList<String>();
 			int length;
 			add_del ob = new add_del();
@@ -61,7 +61,7 @@ public class details extends HttpServlet {
 			pizzaId = (ArrayList<String>) session.getAttribute("order");
 			length = pizzaId.size(); 
 			connect();
-			for(int i = 0; i < length; i++) { //error will be resolved after length is assigned value
+			for(int i = 0; i < length; ++i) { //error will be resolved after length is assigned value
 				PreparedStatement ps;
 				try {
 					ps = conn.prepareStatement("select * from table where pizzaid = ?");
