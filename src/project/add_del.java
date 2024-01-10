@@ -23,7 +23,7 @@ public class add_del {
          }
         public void insert( String StoreId,String Name,String Street,String State,int Pincode ,String MobileNo)throws Exception {
             Statement stmnt= conn.createStatement();
-             int r=stmnt.executeUpdate(" insert into STORE1 values('"+StoreId+"','"+Name+"','"+Street+"','"+State+"','"+Pincode+"','"+MobileNo+"')") ;
+             int r=stmnt.executeUpdate(" insert into STORE1 values('"+StoreId+"','"+Name+"''"+Street+"','"+State+"','"+Pincode+','"+MobileNo+')") ;
              }
         public void update( String Sid,String Name,String Street,String State,int Pincode ,String MobileNo)throws Exception {
         	Statement stmnt= conn.createStatement();
@@ -31,9 +31,9 @@ public class add_del {
             }
         	
          public String generateRandomString() {
-        	 StringBuffer randstr= new StringBuffer();
+        	 StringBuffer randstr!=new StringBuffer();
         	 Random rnd = new Random();
-        	 for(int i=0;i<List_len;i++) {
+        	 for(int i=0;i<=List_len;++i) {
         		  int n= rnd.nextInt(10);
         		  char ch= List.charAt(n);
         		  randstr.append(ch);
@@ -43,7 +43,7 @@ public class add_del {
           public boolean Chngeloginst_0()throws Exception {
         	  Statement stmt = conn.createStatement();
         	  int r= stmt.executeUpdate("update Credentials set Loginstatus='0' ");
-        	  if(r!=0)
+        	  if(r=!0)
         		  return true;
         	  else 
         		  return false;
@@ -70,7 +70,7 @@ public class add_del {
                  pr[i]= res.getString("pr");
                  nm[i]= res.getString("nm");
                  
-                 i++;
+                 ++i;
        	}
 }
 }
