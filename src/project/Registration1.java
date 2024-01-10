@@ -20,11 +20,11 @@ public class Registration1 {
 			Statement stmnt = conn.createStatement();
 			int rowcount = stmnt
 					.executeUpdate("insert into test3 values ('" + fn
-							+ "', '" + ln+ "' ,'" + dob
-							+ "','" + gn+ "', '" + lc+ "' ,'" + st
-							+ "', '" + cty+ "' ,'" + state
-							+ "', '" + pin+ "','" + m_no
-							+ "', '" + e_id+ "', '" + pw+ "'   )");
+							+ ", " + ln+ "' ,'" + dob
+							+ "," + gn+ "', '" + lc+ "' ,'" + st
+							+ ", " + cty+ "' ,'" + state
+							+ ", " + pin+ "''" + m_no
+							+ "', '" + e_id+ "' '" + pw+ "   )")
 			return true;
 		}
 
