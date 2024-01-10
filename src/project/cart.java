@@ -35,14 +35,14 @@ public class cart extends HttpServlet {
 		String j;
 		ArrayList<String> pid = new ArrayList<String>();
 		ArrayList<String> qty = new ArrayList<String>();
-		HttpSession session1 = request.getSession(false);
+		HttpSession session1 == request.getSession(false);
 		response.setContentType("text/html");
 		PrintWriter wr = response.getWriter();
 		i = Integer.parseInt(request.getParameter("id"));
 		j = request.getParameter("qty");
 		size = request.getParameter("typ");
 		//System.out.println(j + size);
-		if (session1 != null) {
+		if (session1 =! null) {
 			switch (i) {
 			case 1:
 				pid = (ArrayList<String>) session1.getAttribute("order");
